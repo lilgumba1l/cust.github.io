@@ -1,0 +1,277 @@
+/* Плавная прокрутка */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: #fff;
+  display: flex;
+  overflow-x: hidden; /* Предотвращаем горизонтальную прокрутку */
+}
+
+/* Боковая панель навигации */
+.sidebar {
+  width: 250px;
+  height: 100vh; /* Высота панели на весь экран */
+  background-color: #1f1f1f;
+  padding-top: 50px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar-header h2 {
+  color: #f1f1f1;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sidebar-links {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-links li {
+  margin: 20px 0;
+}
+
+.sidebar-links a {
+  color: #bbb;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.sidebar-links a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Боковая панель ролей */
+.role-sidebar {
+  width: 250px;
+  background-color: #1f1f1f;
+  padding-top: 50px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh; /* Высота панели на весь экран */
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+  color: #f1f1f1;
+  z-index: 1000;
+}
+
+.role-sidebar h3 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.role-links {
+  list-style: none;
+  padding: 0;
+}
+
+.role-links li {
+  margin: 20px 0;
+}
+
+.role-links button {
+  color: #bbb;
+  background: none;
+  border: none;
+  font-size: 18px;
+  text-align: left;
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.role-links button:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Основной контент */
+.content {
+  margin-left: 250px; /* Отступ от левой панели */
+  margin-right: 250px; /* Отступ от правой панели */
+  padding: 50px;
+  flex-grow: 1;
+}
+
+/* Стиль для описания роли */
+.role-description h2 {
+  font-size: 24px;
+  color: #f1f1f1;
+}
+
+.role-description p {
+  font-size: 16px;
+  color: #bbb;
+}
+
+/* Стиль для блоков ролей */
+.role {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  background-color: #1f1f1f;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.role.reverse {
+  flex-direction: row-reverse; /* Картинка справа от текста */
+}
+
+.role img {
+  width: 150px;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.role-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .content {
+    margin-left: 200px;
+  }
+}
+
+  /* Стиль контейнера для ролей */
+  .roles-page {
+    width: 100%;
+    padding: 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+/* Стиль контейнера для роли с перспективой */
+.role {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+    opacity: 1; /* Картинка всегда видна */
+    background-color: #1f1f1f; /* Темный фон блока */
+    border-radius: 15px;
+    padding: 20px;
+
+    max-width: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Легкая тень для блока */
+    perspective: 1000px; /* Добавляем перспективу */
+  }
+
+  /* Основной стиль для ролей */
+.role {
+  display: none; /* Скрываем все блоки ролей по умолчанию */
+  opacity: 0;
+  transition: opacity 0.5s ease; /* Плавный переход для opacity */
+}
+
+.role.show {
+  display: flex;
+  opacity: 1;
+}
+
+/* Стиль для блоков ролей */
+.role-description h2 {
+  font-size: 24px;
+  color: #f1f1f1;
+}
+
+.role-description p {
+  font-size: 16px;
+  color: #bbb;
+}
+
+  /* Стиль для чередования картинок и текста */
+  .role.reverse {
+    flex-direction: row-reverse; /* Картинка справа от текста */
+  }
+  
+  .role-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+/* Стиль для картинки по умолчанию (черно-белая) */
+.role img {
+  width: 150px;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: filter 0.3s ease;
+  filter: grayscale(0.5);  /* Начинаем с черно-белого */
+}
+
+  
+  /* Стиль для картинки при наведении */
+  .role img:hover {
+    transform: scale(1.1); /* Увеличение картинки при наведении */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6); /* Тень при наведении */
+  }
+  
+  /* Описание роли */
+  .role-description {
+    max-width: 80%;
+    opacity: 0; /* Текст скрыт по умолчанию */
+    transform: translateY(20px); /* Текст будет плавно подниматься */
+    transition: opacity 0.8s, transform 0.8s;
+  }
+  
+  h2 {
+    font-size: 24px;
+    color: #f1f1f1;
+    margin-bottom: 15px;
+  }
+  
+  p {
+    font-size: 16px;
+    color: #bbb;
+  }
+  
+  /* Анимация появления текста */
+  .role.show .role-description {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Стили для мобильных устройств */
+  @media (max-width: 768px) {
+    .role {
+      flex-direction: column; /* На мобильных устройствах блоки становятся вертикальными */
+    }
+  
+    .role img {
+      width: 100%; /* Картинка занимает всю ширину блока */
+      margin-bottom: 15px;
+    }
+  
+    .role-description {
+      max-width: 100%;
+    }
+  }
+  
