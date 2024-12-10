@@ -35,4 +35,15 @@ function isElementInView(element) {
       image.style.transition = 'transform 0.3s ease, filter 0.3s ease'; // Плавные переходы
     });
   });
+// Переключение видимости левой боковой панели
+document.querySelector('.sidebar-toggle').addEventListener('click', function() {
+  document.querySelector('.sidebar').classList.toggle('open');
+});
+
+// Переключение видимости правой боковой панели
+document.querySelector('.role-sidebar-toggle').addEventListener('click', function() {
+  document.querySelector('.role-sidebar').classList.toggle('open');
+});
+
+
   
