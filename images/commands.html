@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Роли на сервере</title>
+  <link rel="stylesheet" href="style_commands.css">
+</head>
+<body>
+  <!-- Кнопка для управления левой боковой панелью -->
+  <div class="sidebar-toggle">☰</div>
+
+  <!-- Левая боковая панель для навигации -->
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <h2>METEORA</h2>
+    </div>
+    <ul class="sidebar-links">
+      <li><a href="index.html">Главная страница</a></li>
+      <li><a href="roles.html">Роли</a></li>
+      <li><a href="commands.html">Команды ←</a></li>
+      <li><a href="rules.html">Правила</a></li>
+    </ul>
+  </div>
+
+  <!-- Кнопка для управления правой боковой панелью -->
+  <div class="role-sidebar-toggle">☰</div>
+
+  <!-- Правая боковая панель для выбора ролей -->
+  <div class="role-sidebar">
+    <h3>Выберите роль</h3>
+    <ul class="role-links">
+      <li><button onclick="location.href='#general-commands'">Общие команды</button></li>
+      <li><button onclick="location.href='#role-commands'">Команды для ролей</button></li>
+      <li><button onclick="location.href='#private-commands'">Команды для привата</button></li>
+    </ul>
+  </div>
+
+  <!-- Основной контент страницы -->
+  <div class="content">
+    <!-- Категория: Общие команды -->
+    <section id="general-commands">
+      <h2>Общие команды</h2>
+      <ul>
+        <li><code>/news</code> — Узнать все новые новости</li>
+        <li><code>/msg [ник] [сообщение]</code> — Отправить личное сообщение игроку</li>
+        <li><code>/spawn</code> — Телепортироваться на спавн</li>
+        <li><code>/changepass [ваш пароль] [новый пароль]</code> — Смена пароля</li>
+      </ul>
+    </section>
+
+    <!-- Категория: Команды для ролей -->
+    <section id="role-commands">
+      <h2>Команды для ролей</h2>
+      <h3>Президент</h3>
+      <ul>
+        <li><code>/lp user [ник] parent add [названия роли]</code> — Добавить роль игроку</li>
+        <li><code>/lp user [ник] parent remove [названия роли]</code> — Удалить роль игроку</li>
+        <li><code>/rg info</code> — Узнать информацию об регионе и изменить её</li>
+        <li><code>Создавания роли</code> — Для создания роли вы должны написать Тех. Админу в Discord <code>aris.now</code> и у роли должно быть определённое предназначения.<li>
+      </ul>
+      <h3>Журналист</h3>
+      <ul>
+        <li><code>/broadcast [сообщение]</code> — Отправить сообщение, которое уведёт весь сервер.</li>
+        <li><code>Создания газет</code> — Для создания газеты вы должны написать Тех. Админу в Discord <code>aris.now</code> и написать что будет в газете, и газета появиться на следующий день.</li>
+      </ul>
+    </section>
+
+    <!-- Категория: Приват -->
+    <section id="private-commands">
+      <h2>Команды для привата</h2>
+      <ul>
+        <li><code>/rg claim [название]</code> — Создать приватную территорию</li>
+        <li><code>/rg addmember [название] [ник]</code> — Добавить игрока в приват</li>
+        <li><code>/rg removemember [название] [ник]</code> — Удалить игрока из привата</li>
+        <li><code>/rg addowner [название] [ник]</code> — Добавить владельца в приват</li>
+        <li><code>/rg removeowner [название] [ник]</code> — Удалить владельца из привата</li>
+        <li><code>/rg remove [название]</code> — Полностью удаляет регион</li>
+        <li><code>/rg info</code> — Узнать информацию об регионе</li>
+      </ul>
+    </section>
+
+  </div>
+
+  <script src="script_commands.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Роли на сервере</title>
+  <link rel="stylesheet" href="style_roles.css">
+</head>
+<body>
+  <!-- Кнопка для управления левой боковой панелью -->
+  <div class="sidebar-toggle">☰</div>
+
+  <!-- Левая боковая панель для навигации -->
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <h2>METEORA</h2>
+    </div>
+    <ul class="sidebar-links">
+      <li><a href="index.html">Главная страница</a></li>
+      <li><a href="roles.html">Роли ←</a></li>
+      <li><a href="commands.html">Команды</a></li>
+      <li><a href="rules.html">Правила</a></li>
+    </ul>
+  </div>
+
+  <!-- Кнопка для управления правой боковой панелью -->
+  <div class="role-sidebar-toggle">☰</div>
+
+  <!-- Правая боковая панель для выбора ролей -->
+  <div class="role-sidebar">
+    <h3>Выберите роль</h3>
+    <ul class="role-links">
+      <li><button onclick="location.href='#president'">Президент</button></li>
+      <li><button onclick="location.href='#vice-president'">Вице-президент</button></li>
+      <li><button onclick="location.href='#journalist'">Журналист</button></li>
+      <li><button onclick="location.href='#rab'">Рабочий</button></li>
+      <li><button onclick="location.href='#bezrab'">Безработный</button></li>
+    </ul>
+  </div>
+
+  <!-- Основной контент страницы -->
+  <div class="content">
+    <div class="role" id="president">
+      <div class="role-content">
+        <img src="images/role1.png" alt="Роль 1" class="role-imagef" style="filter: grayscale(0.5); transform: scale(1); transition: transform 0.3s, filter 0.3s;">
+        <div class="role-description">
+          <h2>Презедент</h2>
+          <p>Президент — самая высокопоставленная роль на сервере. Он имеет право назначать, создавать и удалять роли для игроков, а также создавать неограниченное количество приватов. Президент обладает полным доступом ко всем приватом на сервере. Если вы становитесь президентом, вы получаете контроль над всеми аспектами функционирования сервера. К вам могут обращаться "Рабочие", чтобы купить участок. Вы можете создавать участки и передавать права на них гражданам.</p>
+        </div>
+        <img src="images/role1.png" alt="Роль 1" class="role-imaged" style="filter: grayscale(0.5); transform: scale(1); transition: transform 0.3s, filter 0.3s;">
+      </div>
+    </div>
+
+    <div class="role" id="vice-president">
+      <div class="role-content">
+        <img src="images/role2.png" alt="Роль 2" class="role-imagef" style="filter: grayscale(0.5); transform: scale(1); transition: transform 0.3s, filter 0.3s;">
+        <img src="images/role2.png" alt="Роль 2" class="role-image"  style="filter: grayscale(0.5); transform: scale(1); transition: transform 0.3s, filter 0.3s;">
+        <div class="role-description">
+          <h2>Вице-президент</h2>
+          <p>Вице-президент — роль, предоставляемая президентом, доверяющим вам важные обязанности. Вы имеете возможность создавать неограниченное количество приватов, однако не можете назначать или удалять роли, а также не имеете доступа к приватом других игроков. Стать вице-президентом означает принятие на себя значительной ответственности за управление сервером.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="role" id="journalist">
+      <div class="role-content">
+        <img src="images/role3.png" alt="Роль 1" class="role-imagef" style="filter: grayscale(0.5); transform: scale(1); transition: transform 0.3s, filter 0.3s;">
+        <div class="role-description">
+          <h2>Журналист</h2>
+          <p>Журналист — это роль, предоставляющая возможность создавать и публиковать газеты, которые могут быть прочитаны другими игроками с помощью специальной команды. Журналист имеет доступ исключительно к написанию и распространению газет, но не обладает правами на управление сервером. Если вы становитесь журналистом, важно тщательно проверять всю информацию перед публикацией, так как неверные данные могут привести к утрате вашей роли.</p>
+        </div>
+        <img src="images/role3.png" alt="Роль 1" class="role-imaged" style="filter: grayscale(0.5); transform: scale(1); transition: transform 0.3s, filter 0.3s;">
+      </div>
+    </div>
+    <div class="role" id="rab">
+      <div class="role-content">
+        <img src="images/role4.png" alt="Роль 1" class="role-imagef" style="filter: grayscale(0.5); transform: scale(1); transition: transform 0.3s, filter 0.3s;">
+        <img src="images/role4.png" alt="Роль 2" class="role-image"  style="filter: grayscale(0.5); transform: scale(1); transition: transform 0.3s, filter 0.3s;">
+        <div class="role-description">
+          <h2>Рабочий</h2>
+          <p>Рабочий — это роль, которая дает право иметь один личный приват и возможность создавать дополнительные приваты через президента. Вы можете попросить президента предоставить вам работу для заработка, а также имеете право открывать магазины и официально продавать вещи и предметы. Рабочий является гражданином страны и играет важную роль в экономике сервера. Если вы стали рабочим, ваша задача — трудиться во благо страны!</p>
+        </div>
+      </div>
+    </div>
+    <div class="role" id="bezrab">
+      <div class="role-content">
+        <img src="images/role5.png" alt="Роль 1" class="role-imagef" style="filter: grayscale(0.5); transform: scale(1); transition: transform 0.3s, filter 0.3s;">
+        <div class="role-description">
+          <h2>Безработный</h2>
+          <p>Безработный — роль, которая исключает вас из числа граждан страны. Вы можете иметь только один личный приват, но не имеете права продавать вещи и предметы, создавать магазины или получать работу от президента. Если вы становитесь безработным, вы можете вернуться к роли "Рабочий", обратившись к президенту. Президент может предоставить вам эту роль как бесплатно, так и за плату.</p>
+        </div>
+        <img src="images/role5.png" alt="Роль 1" class="role-imaged" style="filter: grayscale(0.5); transform: scale(1); transition: transform 0.3s, filter 0.3s;">
+      </div>
+    </div>
+  </div>
+
+  <script src="script_roles.js"></script>
+</body>
+</html>
